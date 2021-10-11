@@ -7,7 +7,8 @@ const dummyTransactions = [
 
 const addTransactionIntoDOM = transaction => {
     const operator = transaction.amount < 0 ? '-' : '+'
-    console.log(operator)
+    const CSSClass = transaction.amount < 0 ? 'minus' : 'plus'
+    const li = document.createElement('li')
     
     {/*<li class="minus">
         Salário <span>-$400</span><button class="delete-btn">x</button>
