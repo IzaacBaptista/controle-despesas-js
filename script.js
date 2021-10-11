@@ -5,8 +5,8 @@ const dummyTransactions = [
     { id: 4, name: 'Violão', amount: 150 }
 ]
 
-const addTransactionIntoDom = [
-    {
-        
-    }
-]
+const addTransactionIntoDOM = transaction => {
+    <li class="minus">
+        Salário <span>-$400</span><button class="delete-btn">x</button>
+    </li>
+}
