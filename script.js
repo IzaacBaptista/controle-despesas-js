@@ -17,9 +17,6 @@ const addTransactionIntoDOM = transaction => {
         ${transaction.name} <span>${operator} R$ <span>${Math.abs(transaction.amount)}</span><button class="delete-btn">x</button>
 
     `
-    {/*<li class="minus">
-        Salário <span>-$400</span><button class="delete-btn">x</button>
-    </li>*/}
 }
 
 addTransactionIntoDOM(dummyTransactions[1])
