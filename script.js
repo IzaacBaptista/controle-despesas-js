@@ -13,3 +13,5 @@ const addTransactionIntoDOM = transaction => {
         Salário <span>-$400</span><button class="delete-btn">x</button>
     </li>*/}
 }
+
+addTransactionIntoDOM(dummyTransactions[0])
