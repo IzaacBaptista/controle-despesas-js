@@ -3,7 +3,7 @@ const incomeDisplay = document.querySelector('#money-plus')
 const expenseDisplay = document.querySelector('#money-minus')
 const balanceDisplay = document.querySelector('#balance')
 const form = document.querySelector('#form')
-const input = document.querySelector('#text')
+const inputTransactionName = document.querySelector('#text')
 const inputTransactionAmount = document.querySelector('#amount')
 
 const dummyTransactions = [
@@ -57,7 +57,14 @@ init()
 form.addEventListener('submit', event => {
     event.preventDefault()
 
-    if (inputTransactionName.value.trim() === '' || inputTransactionAmount.value.trim() === '') {
+    const transactionName = transactionName.value.trim()
+    const transactionAmount = transactionAmount.value.trim()
+
+    if (transactionName === '' || transactionAmount === '') {
         alert('Por favor, preencha tanto o nome quanto o valor da transação!')
+        return
     }
+
+    const transaction = { id: 1, name: transactionName, amount: transactionAmount}
+    
 })
