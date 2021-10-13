@@ -13,6 +13,8 @@ let dummyTransactions = [
     { id: 4, name: 'Violão', amount: 150 }
 ]
 
+const localStorageTransactions = localStorage.getItem('transactions')
+
 const removeTransaction = ID => {
     dummyTransactions = dummyTransactions.filter(transaction => transaction.id !== ID)
     init()
