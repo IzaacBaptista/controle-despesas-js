@@ -12,7 +12,9 @@ let transactions = localStorage
     .getItem('transactions') !== null ? localStorageTransactions : []
 
 const removeTransaction = ID => {
-    transactions = transactions.filter(transaction => transaction.id !== ID)
+    transactions = transactions.filter(transaction => 
+        transaction.id !== ID)
+        updateLocalStorage
     init()
 }
 
@@ -62,7 +64,7 @@ const init = () => {
 
 init()
 
-const updatedLocalStorage = () => {
+const updateLocalStorage = () => {
     localStorage.setItem('transactions', JSON.stringify(transactions))
 }
 
@@ -84,8 +86,10 @@ form.addEventListener('submit', event => {
         name: transactionName, 
         amount: Number(transactionAmount)
     }
+
     transactions.push(transaction)
     init()
+    updateLocalStorage()
 
     inputTransactionName.value = ''
     inputTransactionAmount.value = ''
