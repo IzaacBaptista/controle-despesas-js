@@ -14,7 +14,7 @@ let transactions = localStorage
 const removeTransaction = ID => {
     transactions = transactions.filter(transaction => 
         transaction.id !== ID)
-        updateLocalStorage
+        updateLocalStorage()
     init()
 }
 
