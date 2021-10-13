@@ -48,6 +48,7 @@ const updateBalanceValues = () => {
 }
 
 const init = () => {
+    transactionsUl.innerHTML = ''
     dummyTransactions.forEach(addTransactionIntoDOM)
     updateBalanceValues()
 }
@@ -70,7 +71,7 @@ form.addEventListener('submit', event => {
     const transaction = { 
         id: generateID(), 
         name: transactionName, 
-        amount: transactionAmount
+        amount: Number(transactionAmount)
     }
     dummyTransactions.push(transaction)
     init()
