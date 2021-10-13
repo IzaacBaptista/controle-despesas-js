@@ -67,6 +67,14 @@ form.addEventListener('submit', event => {
         return
     }
 
-    const transaction = { id: generateID(), name: transactionName, amount: transactionAmount}
-    console.log(transaction)
+    const transaction = { 
+        id: generateID(), 
+        name: transactionName, 
+        amount: transactionAmount
+    }
+    dummyTransactions.push(transaction)
+    init()
+
+    inputTransactionName.value = ''
+    inputTransactionAmount.value = ''
 })
